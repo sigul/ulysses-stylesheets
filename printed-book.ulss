@@ -1,0 +1,474 @@
+// Printer book by Silvio Gulizia
+
+//
+// Document & Layout Settings
+//
+
+document-settings {
+	page-height:		6.88in;	page-width:		4.24in
+	// Amazon KDP 5.25" x 8" (13.34 x 20.32 cm), but you can even use a custom size
+	// Lulu Premium Pocket  4.24 x 6.88 in for US or Libro tascabile 10.79 x 17.46 cm for Italy
+	// Lulu premium paper A5  5.83 x 8.26 in (14.81 x 20.99 cm) both US and Italy
+	// Lulu economic 5.5" x 8.5" in (13.97 x 21.59 cm) in Italy
+	page-inset-top:		0.5in;	page-inset-inner:	0.75in
+	page-inset-bottom:	0.5in;	page-inset-outer:	0.5in
+	// For bound books 6"x 9" (15cm x 23cm) or smaller, use 0.5" (1.27cm) margins on the top, outside and bottom of books, and a 0.75" (1.91cm) inside margin.
+	// Adjust margins, font size, and columns to produce 65-70 characters per line (including spaces).
+
+	two-sided:			yes
+	// page inset inner and outer are switched for left and right pages
+	page-binding:			left
+	//first page on the right side
+
+	
+	section-break:     heading-2
+	// always have h1 and h2 on a new page 
+
+	footnote-enumeration:		per-section
+	// alternative are per page, or continuous
+	footnote-placement:		end-of-page
+	footnote-style:			decimal
+}
+
+//
+// Default Typography
+//
+
+defaults {
+	font-family:			"Hoefler Text"
+	font-size:				9.5pt
+	line-height:			11pt
+	text-alignment:			justified
+	hyphenation:			yes
+	// individual styles can override this
+}
+
+//
+// Basic Non-Text-Area Page Layout
+//
+
+area-header {
+	text-alignment:		center
+	// place the heading of the chapter on the page headers
+	top-spacing:		12mm
+	bottom-spacing:		10mm
+	font-size:			6pt
+}
+
+area-header:first-page {
+	content:			none
+	// avoid placing heading on the first page of a section
+}
+
+area-header:right-page {
+	content:			heading
+	// avoid placing heading on the first page of a section
+}
+
+area-header:left-page {
+	content:	heading
+	// content:			"Silvio Gulizia"
+	// put your author name between "" or declare none for nothing or heading for section title
+}
+
+// this section is for page numbering, in the footer 
+area-footer {
+	content:				page-number
+	font-size:				8pt
+	text-alignment:			center
+	top-spacing:			0pt
+	bottom-spacing:			0.4in
+}
+
+area-footer:first-page {
+	content:				none
+}
+
+area-footer:left-page {
+	text-alignment:			left
+}
+
+area-footer:right-page {
+	text-alignment:			right
+}
+
+area-footnotes {
+	font-size:				9.5pt
+	line-height:			11pt
+	top-spacing:			0pt
+	// additional space cut off from text area
+
+	divider-width:			0.5pt
+	divider-length:			20mm
+	divider-spacing:		5pt
+	// space between divider and footnotes
+
+	anchor-inset:			5mm
+	anchor-alignment:		right
+
+	text-inset:				6mm
+}
+
+//
+// Headers
+//
+
+heading-all {
+    font-weight:            bold
+    text-alignment:         center
+    margin-top:             2em
+	font-family:			"Hoefler Text"
+	font-size:				12pt;
+	line-height:			18pt;
+	margin-bottom:			22pt
+	keep-with-following:	yes
+	// Remember that setting in defaults?
+}
+
+heading-all + paragraph {
+	first-line-indent:			0pt
+	orphans-and-widows:   		prevented
+	// Do not indent the first paragraph after any headline
+}
+
+heading-all + list-all {
+	margin-top: 			0pt
+	// Sets first list item after headline as if it were a paragraph
+}
+
+list-all paragraph {
+	margin-top:			0pt
+	// No spacing within a list
+	// da rivedere
+}
+
+
+heading-1 {
+	style-title:			"Chapter Title"	
+	font-size:				15pt
+	line-height: 			24pt
+	margin-top:				200pt
+	margin-bottom:			22pt
+	keep-with-following:	true
+	text-alignment:			center
+	hyphenation:			no
+	font-weight: 			bold
+	page-break:				none
+}
+
+
+heading-1:first {
+	// This is meant to be the title of the Novel that is used only on the first page
+	style-title:			"Title"
+	page-break: 			none
+	font-size:				35pt
+	line-height: 			54pt
+	margin-top: 			120pt
+	page-break:				none
+}
+
+heading-2 {
+	style-title:			"Part title"
+	margin-top:				72pt
+	margin-bottom:			72pt
+	font-size:				34pt
+	font-weight:			bold
+	line-height:			48pt
+	hyphenation:			no
+	text-alignment:			center
+	page-break: 			yes
+}
+
+heading-3 {
+	style-title: 			"Chapter subheading"
+	font-size:				12pt
+	line-height: 			19pt
+	font-weight:			bold
+	margin-top:				22pt
+	margin-bottom:			11pt
+	keep-with-following:	true
+	text-alignment:			left
+	hyphenation:			no
+	page-break: 			none
+}
+
+heading-3:first {
+	style-title:			"Author"
+	font-size: 				11pt
+	line-height: 			17pt
+	page-break: 			after
+	text-alignment: 		center
+}
+
+
+heading-4 {
+	// used for 2nd level subheading
+	font-size:				9.5pt
+	line-height:			11pt
+	margin-top:				11pt
+	margin-bottom:			11pt
+	text-alignment:			center
+	hyphenation:			yes
+	page-break: 			none
+}
+
+
+heading-4:first {
+	style-title: 			"Book subtitle"
+	margin-top:				12pt
+	margin-bottom:			12pt
+	font-size:				24pt
+	font-weight:			normal
+	line-height:			30pt
+	hyphenation:			no
+	text-alignment:			center
+	page-break: 			none
+}
+
+
+heading-5 {
+	// used to aling center text
+	font-size:				9.5pt
+	line-height:			11pt
+	text-alignment:			center
+	hyphenation:			yes
+}
+
+heading-6 {
+}
+
+//
+// Paragraph styles
+//
+
+paragraph {
+	style-title:            "Body"
+	// As shown and used by MS Word style-title: "Paragraph"
+	margin-bottom:          1em
+	first-line-indent:		11pt
+	margin-top: 			11pt
+	margin-bottom:			11pt
+	orphans-and-widows:   	prevented
+}
+
+paragraph:first {
+	first-line-indent:		0em
+	// Do not indent the first paragraph, like... ever
+}
+
+paragraph-divider {
+	page-break:			none
+	// it could be Set to help with manual page breaks with after
+	content: 			"❧"
+	text-alignment: 	center
+	font-color: 		#000000
+	margin-top:			11pt
+	margin-bottom:		11pt
+	// first-line-indent:	0pt
+	visibility:			visible
+}
+
+paragraph-figure {
+	margin-top:				22pt
+	margin-bottom:			22pt
+	first-line-indent:		0pt
+	text-alignment:			center
+
+	// Applies to paragraphs that only hold images
+}
+
+
+paragraph-figure + paragraph {
+	first-line-indent:		0pt
+	orphans-and-widows:   	prevented
+	// Do not indent the first paragraph after a figure
+}
+
+
+//
+// Block styles
+//
+
+block-all {
+	margin-top:		11pt
+	margin-bottom:	11pt
+	margin-left:	22pt
+	margin-right:	22pt
+}
+
+block-all + paragraph {
+	first-line-indent:		0pt
+	orphans-and-widows:		prevented
+	// Do not indent the first paragraph after a list or quote
+}
+
+block-comment {
+	visibility:				hidden
+	// kills comment blocks
+}
+
+block-quote {
+    style-title:	"Block Quote"
+    font-size:		8.5pt
+    margin-left:	11pt
+    margin-right:	11pt
+    font-slant:		italic
+}
+
+block-quote > heading-5 {
+	// used to forma cite 
+	text-alignment: right
+	font-size: 9.5pt
+	font-slant: normal
+	font-weight: normal
+}
+
+block-quote + block-quote > heading-5 {
+	margin-top: 0pt
+}
+
+//block-raw {
+//    style-title:            "Vellum Chapter Subtitle"
+//    visibility:             visible
+//    text-alignment:         center
+//    font-slant:             italic
+//   margin-bottom:          1em
+//}
+
+block-comment {
+    visibility:		hidden
+}
+
+
+//
+// Inline styles
+//
+
+inline-strong {
+	font-weight:		bold
+	style-title:	"Strong"	
+}
+
+inline-emphasis {
+	font-slant:			italic
+	style-title:	"Italic"	
+}
+
+inline-citation {
+	font-slant:			normal
+	style-title:	"Inline Cite"	
+}
+
+inline-link {
+	underline:			yes
+	style-title:		"Link"
+}
+
+inline-comment {
+	visibility:			hidden
+	// kills comments
+}
+
+inline-delete {
+	visibility:			hidden
+	// deletes deletions
+}
+
+inline-footnote paragraph {
+	first-line-indent:		0pt
+	// Do not indent paragraph in footnotes
+	margin-bottom: 0pt
+}
+
+//
+// List styles
+//
+
+list-all {
+	margin-left:			10pt
+	margin-right:			10pt
+	margin-top:				11pt
+	margin-bottom:			11pt
+	item-spacing:			0.5pt
+	//line-height: 			0pt
+	// overwrites block-all
+}
+
+list-all list-all {
+	margin-top:				7pt
+	margin-bottom:			7pt
+	// Spacings between nested ordered and unordered lists
+}
+
+list-ordered {
+	enumeration-format:		"%p."
+	enumeration-style:		decimal
+	text-inset:				13pt
+	// Simulates tab stop justified right
+}
+
+list-ordered list-ordered {
+	enumeration-format:		"%*%p"
+	enumeration-style:		decimal
+	text-inset:				26pt
+	// Simulates tab stop justified right
+}
+
+list-ordered list-ordered list-ordered {
+	enumeration-format:		"%*.%p"
+	enumeration-style:		decimal
+	text-inset:				39pt
+	// Simulates tab stop justified right
+}
+
+list-unordered {
+	enumeration-format:		"–"
+	text-inset:				10pt
+	// Simulates tab stop justified right
+}
+
+list-unordered list-unordered {
+	enumeration-format:		"–"
+	text-inset:				10pt
+	// Simulates tab stop justified right
+}
+
+
+//
+// Ulysses specific stuff
+// By default, we are hiding tags (##) etc.
+//
+	
+
+ulysses-tag {
+	visibility:			hidden
+}
+
+inline-link ulysses-tag {
+	visibility: hidden
+
+}
+
+list-all ulysses-tag {
+
+	visibility: hidden
+}
+
+
+ulysses-whitespace {
+	visibility:			hidden
+}
+
+ulysses-escape-character {
+	visibility:			hidden
+}
+
+
+//
+// Media styles
+//
+
+media-image {
+	margin-left: 11pt
+	margin-right: 11pt
+}
