@@ -44,6 +44,7 @@ document-settings {
 
 defaults {
 	font-family:			"Hoefler Text"
+	font-style: 			"Regular"
 	font-size:				9.5pt
 	line-height:			11pt
 	text-alignment:			justified
@@ -84,7 +85,7 @@ area-footer {
 	content:				page-number
 	font-size:				8pt
 	text-alignment:			center
-	top-spacing:			0pt
+	top-spacing:			2em
 	bottom-spacing:			0.4in
 }
 
@@ -103,7 +104,7 @@ area-footer:right-page {
 area-footnotes {
 	font-size:				9.5pt
 	line-height:			11pt
-	top-spacing:			0pt
+	top-spacing:			2em
 	// additional space cut off from text area
 
 	divider-width:			0.5pt
@@ -252,10 +253,9 @@ heading-6 {
 paragraph {
 	style-title:            "Body"
 	// As shown and used by MS Word style-title: "Paragraph"
-	margin-bottom:          1em
-	first-line-indent:		11pt
-	margin-top: 			11pt
-	margin-bottom:			11pt
+	first-line-indent:		1em
+	margin-top: 			1em
+	//margin-bottom:			1em
 	orphans-and-widows:   	prevented
 }
 
@@ -270,16 +270,16 @@ paragraph-divider {
 	content: 			"❧"
 	text-alignment: 	center
 	font-color: 		#000000
-	margin-top:			11pt
-	margin-bottom:		11pt
+	margin-top:			1em
+	margin-bottom:		1em
 	// first-line-indent:	0pt
 	visibility:			visible
 }
 
 paragraph-figure {
-	margin-top:				22pt
-	margin-bottom:			22pt
-	first-line-indent:		0pt
+	margin-top:				1em
+	margin-bottom:			1em
+	first-line-indent:		0em
 	text-alignment:			center
 
 	// Applies to paragraphs that only hold images
@@ -298,10 +298,10 @@ paragraph-figure + paragraph {
 //
 
 block-all {
-	margin-top:		11pt
-	margin-bottom:	11pt
-	margin-left:	22pt
-	margin-right:	22pt
+	margin-top:		1em
+	margin-bottom:	1em
+	margin-left:	1em
+	margin-right:	1em
 }
 
 block-all + paragraph {
@@ -318,8 +318,8 @@ block-comment {
 block-quote {
     style-title:	"Block Quote"
     font-size:		8.5pt
-    margin-left:	11pt
-    margin-right:	11pt
+    margin-left:	1em
+    margin-right:	1em
     font-slant:		italic
 }
 
@@ -393,18 +393,21 @@ inline-footnote paragraph {
 //
 
 list-all {
-	margin-left:			10pt
-	margin-right:			10pt
-	margin-top:				11pt
-	margin-bottom:			11pt
-	item-spacing:			0.5pt
-	//line-height: 			0pt
+	margin-left:			1em
+	margin-right:			1em
+	font-size:				8.5pt	
+	line-height:			9pt
+	//item-spacing:			0.5em
+	margin-top:				0.2em
+	//margin-bottom:			11pt
+	
 	// overwrites block-all
 }
 
 list-all list-all {
-	margin-top:				7pt
-	margin-bottom:			7pt
+	
+	//margin-top:				7pt
+	//margin-bottom:			7pt
 	// Spacings between nested ordered and unordered lists
 }
 
