@@ -326,6 +326,8 @@ block-quote {
 
 block-quote > heading-5 {
 	// used to format citation inside a block-quote
+	// format citation in a separate line, like this "> ##### Name Surname"
+	// please note that Ulysses default markup doesn't provide a tag for citation. You can add one by duplicating the original markup and editing the cite tag. I use < to open cite and > to close it. so in my case citation in markdown appear this way "> ##### <Name Surname>>"
 	text-alignment: right
 	font-size: 8.5pt
 	font-slant: normal
