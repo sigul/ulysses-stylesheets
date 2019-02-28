@@ -7,38 +7,41 @@
 // Visit http://www.ulyssesapp.com/styles
 // for full reference
 //
+// Look at github.com/sigul/ulysses-stylesheets to find source and the additional ePub version.
+//
 
 //
 // Document & Layout Settings
 //
 
 document-settings {
-	page-height:		6.88in;	page-width:		4.24in
+	page-height:	6.88in;	page-width:	4.24in
 	// Amazon KDP 5.25" x 8" (13.34 x 20.32 cm), but you can even use a custom size
 	// Lulu Premium Pocket  4.24 x 6.88 in for US or Libro tascabile 10.79 x 17.46 cm for Italy
-		// Lulu premium paper A5  5.83 x 8.26 in (14.81 x 20.99 cm) both US and Italy
+	// Lulu premium paper A5  5.83 x 8.26 in (14.81 x 20.99 cm) both US and Italy
 	// Lulu economic 5.5" x 8.5" in (13.97 x 21.59 cm) in Italy
+	
 	page-inset-top:		0.5in;	page-inset-inner:	0.75in
 	page-inset-bottom:	0.5in;	page-inset-outer:	0.5in
 	// For bound books 6"x 9" (15cm x 23cm) or smaller, use 0.5" (1.27cm) margins on the top, outside and bottom of books, and a 0.75" (1.91cm) inside margin.
 	// Adjust margins, font size, and columns to produce 65-70 characters per line (including spaces).
 
-	two-sided:			yes
+	two-sided:		yes
 	// page inset inner and outer are switched for left and right pages
-	page-binding:			left
+	page-binding:		left
 	//first page on the right side
 
 	
-	section-break:     heading-2
+	section-break:		heading-2
 	// always have h1 and h2 on a new page 
 
-	footnote-enumeration:		per-section
+	footnote-enumeration:	per-section
 	// alternative are per page, or continuous
-	footnote-placement:		end-of-page
-	footnote-style:			decimal
+	footnote-placement:	end-of-page
+	footnote-style:		decimal
 
-	page-number-format:      "- %p -"
-	page-number-style:       decimal
+	page-number-format:	"- %p -"
+	page-number-style:	decimal
 }
 
 //
@@ -46,12 +49,12 @@ document-settings {
 //
 
 defaults {
-	font-family:			"Hoefler Text"
-	font-style: 			"Regular"
-	font-size:				9.5pt
-	line-height:			11pt
-	text-alignment:			justified
-	hyphenation:			yes
+	font-family:		"Hoefler Text"
+	font-style:		"Regular"
+	font-size:		9.5pt
+	line-height:		11pt
+	text-alignment:		justified
+	hyphenation:		yes
 	// individual styles can override this
 }
 
@@ -64,62 +67,62 @@ area-header {
 	// place the heading of the chapter on the page headers
 	top-spacing:		12mm
 	bottom-spacing:		10mm
-	font-size:			6pt
+	font-size:		6pt
 }
 
 area-header:first-page {
-	content:			none
+	content:		none
 	// avoid placing heading on the first page of a section
 }
 
 area-header:right-page {
-	content:			heading
+	content:		heading
 	// avoid placing heading on the first page of a section
 }
 
 area-header:left-page {
-	content:	heading
-	// content:			"Silvio Gulizia"
+	content:		heading
+	// content:		"Silvio Gulizia"
 	// put your author name between "" or declare none for nothing or heading for section title
 }
 
 // this section is for page numbering, in the footer 
 area-footer {
-	content:				page-number
-	font-size:				8pt
-	text-alignment:			center
-	top-spacing:			2em
-	bottom-spacing:			0.4in
+	content:		page-number
+	font-size:		8pt
+	text-alignment:		center
+	top-spacing:		2em
+	bottom-spacing:		0.4in
 }
 
 area-footer:first-page {
-	content:				none
+	content:		none
 }
 
 // using this tags you can align the page number
 //area-footer:left-page {
-//	text-alignment:			left
+//	text-alignment:		left
 //}
 
 //area-footer:right-page {
-//	text-alignment:			right
+//	text-alignment:		right
 //}
 
 area-footnotes {
-	font-size:				9.5pt
-	line-height:			11pt
-	top-spacing:			2em
+	font-size:		9.5pt
+	line-height:		11pt
+	top-spacing:		2em
 	// additional space cut off from text area
 
-	divider-width:			0.5pt
-	divider-length:			20mm
-	divider-spacing:		5pt
+	divider-width:		0.5pt
+	divider-length:		20mm
+	divider-spacing:	5pt
 	// space between divider and footnotes
 
-	anchor-inset:			5mm
-	anchor-alignment:		right
+	anchor-inset:		5mm
+	anchor-alignment:	right
 
-	text-inset:				6mm
+	text-inset:		6mm
 }
 
 //
@@ -127,127 +130,146 @@ area-footnotes {
 //
 
 heading-all {
-    font-weight:            bold
-    text-alignment:         center
-    margin-top:             2em
-	font-family:			"Hoefler Text"
-	font-size:				12pt;
-	line-height:			18pt;
-	margin-bottom:			22pt
+	font-weight:		bold
+	text-alignment:		center
+	margin-top:		2em
+	font-family:		"Hoefler Text"
+	font-size:		12pt
+	line-height:		18pt
+	margin-bottom:		22pt
 	keep-with-following:	yes
 	// Remember that setting in defaults?
 }
 
 heading-all + paragraph {
-	first-line-indent:			0pt
-	orphans-and-widows:   		prevented
+
+	first-line-indent:	0pt
+	orphans-and-widows:	prevented
 	// Do not indent the first paragraph after any headline
 }
 
 heading-all + list-all {
-	margin-top: 			0pt
+	margin-top:		0pt
 	// Sets first list item after headline as if it were a paragraph
 }
 
 list-all paragraph {
-	margin-top:			0pt
+	margin-top:		0pt
 	// No spacing within a list
 	// da rivedere
 }
 
 
 heading-1 {
-	style-title:			"Chapter Title"	
-	font-size:				15pt
-	line-height: 			24pt
-	margin-top:				200pt
-	margin-bottom:			22pt
+	style-title:		"Chapter Title"	
+	//style-title:		"Heading"
+	// style is now defined based on Pages book template.
+	font-size:		15pt
+	line-height:		24pt
+	margin-top:		200pt
+	margin-bottom:		22pt
 	keep-with-following:	true
-	text-alignment:			center
-	hyphenation:			no
-	font-weight: 			bold
-	page-break:				none
+	text-alignment:		center
+	hyphenation:		no
+	font-weight:		bold
+	page-break:		none
 }
 
 
-heading-1:first {
+//heading-1:first {
 	// This is meant to be the title of the Novel that is used only on the first page
-	style-title:			"Title"
-	page-break: 			none
-	font-size:				35pt
-	line-height: 			54pt
-	margin-top: 			120pt
-	page-break:				none
-}
+	//style-title:		"Title"
+//	page-break:		none
+//	font-size:		35pt
+//	line-height:		54pt
+//	margin-top:		120pt
+//	page-break:		none
+//}
 
 heading-2 {
-	style-title:			"Part title"
-	margin-top:				72pt
-	margin-bottom:			72pt
-	font-size:				34pt
-	font-weight:			bold
-	line-height:			48pt
-	hyphenation:			no
-	text-alignment:			center
-	//page-break: 			after
+	style-title:		"Part title"
+	// this style is missing in Pages and will be created
+	margin-top:		72pt
+	margin-bottom:		72pt
+	font-size:		24pt
+	font-weight:		bold
+	line-height:		36pt
+	hyphenation:		no
+	text-alignment:		center
+	page-break:		after
 }
+
 
 heading-3 {
-	style-title: 			"Chapter subheading"
-	font-size:				12pt
-	line-height: 			19pt
-	font-weight:			bold
-	margin-top:				22pt
-	margin-bottom:			11pt
+	style-title:		"Chapter heading"
+	// used as heading inside chapter to break paragrap
+	font-size:		10pt
+	line-height:		19pt
+	font-weight:		bold
+	margin-top:		11pt
+	margin-bottom:		0pt
 	keep-with-following:	true
-	text-alignment:			left
-	hyphenation:			no
-	page-break: 			none
+	text-alignment:		left
+	hyphenation:		no
+	page-break:		none
 }
 
-heading-3:first {
-	style-title:			"Author"
-	font-size: 				11pt
-	line-height: 			17pt
-	page-break: 			after
-	text-alignment: 		center
-}
+//heading-3:first {
+//	style-title:		"Author"
+	// This style is missing in Pages and will be created
+//	font-size:		11pt
+//	line-height:		17pt
+//	page-break:		after
+//	text-alignment:		center
+//}
 
 
 heading-4 {
 	// used for 2nd level subheading
-	font-size:				9.5pt
-	line-height:			11pt
-	margin-top:				11pt
-	margin-bottom:			11pt
-	text-alignment:			center
-	hyphenation:			yes
-	page-break: 			none
+	// used even for subtitle. I am not using a :first class to avoid Pages renaming the style
+	style-title:		"Heading 3"
+	font-size:		9.5pt
+	line-height:		11pt
+	margin-top:		11pt
+	margin-bottom:		11pt
+	text-alignment:		center
+	hyphenation:		yes
+	page-break:		none
 }
 
 
 heading-4:first {
-	style-title: 			"Book subtitle"
-	margin-top:				12pt
-	margin-bottom:			12pt
-	font-size:				24pt
-	font-weight:			normal
-	line-height:			30pt
-	hyphenation:			no
-	text-alignment:			center
-	page-break: 			none
+	style-title:		"Subtitle"
+	// As seen in Pages book template
+	margin-top:		12pt
+	margin-bottom:		12pt
+	font-size:		24pt
+	font-weight:		normal
+	line-height:		30pt
+	hyphenation:		no
+	text-alignment:		center
+	page-break:		none
 }
 
 
 heading-5 {
+
 	// used to aling center text
-	font-size:				9.5pt
-	line-height:			11pt
-	text-alignment:			center
-	hyphenation:			yes
+	// useful to add author below title and center align copyright 
+	font-size:		9.5pt
+	line-height:		11pt
+	text-alignment:		center
+	hyphenation:		yes
 }
 
 heading-6 {
+
+	page-break:		none
+	style-title: 		"Book Title"
+	font-size:		35pt
+	line-height:		54pt
+	margin-top:		120pt
+	page-break:		none
 }
 
 //
@@ -255,43 +277,50 @@ heading-6 {
 //
 
 paragraph {
-	style-title:            "Body"
+
+	style-title:		"Body"
 	// As shown and used by MS Word style-title: "Paragraph"
-	first-line-indent:		1em
-	margin-top: 			1em
-	//margin-bottom:			1em
-	orphans-and-widows:   	prevented
+	first-line-indent:	1em
+	margin-top: 		1em
+	//margin-bottom:	1em
+	orphans-and-widows:	prevented
 }
 
 paragraph:first {
-	first-line-indent:		0em
+	first-line-indent:	0em
 	// Do not indent the first paragraph, like... ever
 }
 
+paragraph + paragraph {
+
+	margin-top: 0pt
+}
+
 paragraph-divider {
-	page-break:			none
+
+	page-break:		none
 	// it could be Set to help with manual page breaks with after
-	content: 			"❧"
-	text-alignment: 	center
-	font-color: 		#000000
-	margin-top:			1em
+	content:		"❧"
+	text-alignment:		center
+	font-color:		#000000
+	margin-top:		1em
 	margin-bottom:		1em
 	// first-line-indent:	0pt
-	visibility:			visible
+	visibility:		visible
 }
 
 paragraph-figure {
-	margin-top:				1em
-	margin-bottom:			1em
-	first-line-indent:		0em
-	text-alignment:			center
+	margin-top:		1em
+	margin-bottom:		1em
+	first-line-indent:	0em
+	text-alignment:		center
 
 	// Applies to paragraphs that only hold images
 }
 
 
 paragraph-figure + paragraph {
-	first-line-indent:		0pt
+	first-line-indent:	0pt
 	orphans-and-widows:   	prevented
 	// Do not indent the first paragraph after a figure
 }
@@ -303,56 +332,51 @@ paragraph-figure + paragraph {
 
 block-all {
 	margin-top:		1em
-	margin-bottom:	1em
-	margin-left:	1em
-	margin-right:	1em
+	margin-bottom:		1em
+	margin-left:		1em
+	margin-right:		1em
 }
 
 block-all + paragraph {
-	first-line-indent:		0pt
-	orphans-and-widows:		prevented
+	first-line-indent:	0pt
+	orphans-and-widows:	prevented
 	// Do not indent the first paragraph after a list or quote
 }
 
 block-comment {
-	visibility:				hidden
+	visibility:		hidden
 	// kills comment blocks
 }
 
 block-quote {
-    style-title:	"Block Quote"
-    font-size:		8.5pt
-    margin-left:	1em
-    margin-right:	1em
-    font-slant:		italic
+	style-title:		"Block Quote"
+	font-size:		8.5pt
+	margin-left:		1em
+	margin-right:		1em
+	font-slant:		italic
 }
 
 
 block-quote > heading-5 {
+
 	// used to format citation inside a block-quote
 	// format citation in a separate line, like this "> ##### Name Surname"
 	// please note that Ulysses default markup doesn't provide a tag for citation. You can add one by duplicating the original markup and editing the cite tag. I use < to open cite and > to close it. so in my case citation in markdown appear this way "> ##### <Name Surname>>"
-	text-alignment: right
-	font-size: 8.5pt
-	font-slant: normal
-	font-weight: normal
-        margin-top: 1pt
+	
+	text-alignment: 	right
+	font-size: 		8.5pt
+	font-slant: 		normal
+	font-weight: 		normal
+        margin-top: 		1pt
 }
 
 block-quote + block-quote > heading-5 {
-	margin-top: 0pt
+
+	margin-top: 		0pt
 }
 
-//block-raw {
-//    style-title:            "Vellum Chapter Subtitle"
-//    visibility:             visible
-//    text-alignment:         center
-//    font-slant:             italic
-//   margin-bottom:          1em
-//}
-
 block-comment {
-    visibility:		hidden
+	visibility:		hidden
 }
 
 
@@ -361,44 +385,47 @@ block-comment {
 //
 
 inline-strong {
+	
 	font-weight:		bold
-	style-title:	"Strong"	
+	style-title:		"Strong"	
 }
 
 inline-emphasis {
-	font-slant:			italic
-	style-title:	"Italic"	
+	font-slant:		italic
+	style-title:		"Italic"	
 }
 
 // Treat annotations as ordinary text
 inline-annotation {
-	footnote-visibility: hidden
+
+	footnote-visibility: 	hidden
 }
 
 inline-citation {
-	style-title:	"Inline Cite"	
+
+	style-title:		"Inline Cite"	
 }
 
 
 inline-link {
-	underline:			single
+	underline:		single
 	style-title:		"Link"
 }
 
 inline-comment {
-	visibility:			hidden
+	visibility:		hidden
 	// kills comments
 }
 
 inline-delete {
-	visibility:			hidden
+	visibility:		hidden
 	// deletes deletions
 }
 
 inline-footnote paragraph {
-	first-line-indent:		0pt
+	first-line-indent:	0pt
 	// Do not indent paragraph in footnotes
-	margin-bottom: 0pt
+	margin-bottom: 		0pt
 }
 
 //
@@ -406,54 +433,54 @@ inline-footnote paragraph {
 //
 
 list-all {
-	margin-left:			1em
-	margin-right:			1em
-	font-size:				8.5pt	
-	line-height:			9pt
-	//item-spacing:			0.5em
-	margin-top:				0.2em
-	//margin-bottom:			11pt
+	margin-left:		1em
+	margin-right:		1em
+	font-size:		8.5pt	
+	line-height:		9pt
+	//item-spacing:		0.5em
+	margin-top:		0.2em
+	//margin-bottom:	11pt
 	
 	// overwrites block-all
 }
 
 list-all list-all {
 	
-	//margin-top:				7pt
-	//margin-bottom:			7pt
+	//margin-top:		7pt
+	//margin-bottom:	7pt
 	// Spacings between nested ordered and unordered lists
 }
 
 list-ordered {
-	enumeration-format:		"%p."
-	enumeration-style:		decimal
-	text-inset:				13pt
+	enumeration-format:	"%p."
+	enumeration-style:	decimal
+	text-inset:		13pt
 	// Simulates tab stop justified right
 }
 
 list-ordered list-ordered {
-	enumeration-format:		"%*%p"
-	enumeration-style:		decimal
-	text-inset:				26pt
+	enumeration-format:	"%*%p"
+	enumeration-style:	decimal
+	text-inset:		26pt
 	// Simulates tab stop justified right
 }
 
 list-ordered list-ordered list-ordered {
-	enumeration-format:		"%*.%p"
-	enumeration-style:		decimal
-	text-inset:				39pt
+	enumeration-format:	"%*.%p"
+	enumeration-style:	decimal
+	text-inset:		39pt
 	// Simulates tab stop justified right
 }
 
 list-unordered {
-	enumeration-format:		"–"
-	text-inset:				10pt
+	enumeration-format:	"–"
+	text-inset:		10pt
 	// Simulates tab stop justified right
 }
 
 list-unordered list-unordered {
-	enumeration-format:		"–"
-	text-inset:				10pt
+	enumeration-format:	"–"
+	text-inset:		10pt
 	// Simulates tab stop justified right
 }
 
@@ -465,26 +492,26 @@ list-unordered list-unordered {
 	
 
 ulysses-tag {
-	visibility:			hidden
+	visibility:		hidden
 }
 
 inline-link ulysses-tag {
-	visibility: hidden
+	visibility:		hidden
 
 }
 
 list-all ulysses-tag {
 
-	visibility: hidden
+	visibility: 		hidden
 }
 
 
 ulysses-whitespace {
-	visibility:			hidden
+	visibility:		hidden
 }
 
 ulysses-escape-character {
-	visibility:			hidden
+	visibility:		hidden
 }
 
 
@@ -493,6 +520,6 @@ ulysses-escape-character {
 //
 
 media-image {
-	margin-left: 11pt
-	margin-right: 11pt
+	margin-left: 		11pt
+	margin-right: 		11pt
 }
