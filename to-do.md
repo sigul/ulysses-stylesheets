@@ -3,5 +3,4 @@ To Do:
 - avoid heading as the last line of a page
 - avoid leaving blanck space at the end of a page when there's a blanck line between paragraph
 - why heading-3:first is not working?
-- show page number on chapter title page and add documentation to hide it, while keeping hidden page number on part title page
 
