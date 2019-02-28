@@ -362,6 +362,11 @@ inline-emphasis {
 	style-title:	"Italic"	
 }
 
+// Treat annotations as ordinary text
+inline-annotation {
+	footnote-visibility: hidden
+}
+
 inline-citation {
 	font-slant:			normal
 	style-title:	"Inline Cite"	
