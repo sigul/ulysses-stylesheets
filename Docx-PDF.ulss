@@ -36,6 +36,9 @@ document-settings {
 	// alternative are per page, or continuous
 	footnote-placement:		end-of-page
 	footnote-style:			decimal
+
+	page-number-format:      "- %p -"
+	page-number-style:       decimal
 }
 
 //
@@ -93,13 +96,14 @@ area-footer:first-page {
 	content:				none
 }
 
-area-footer:left-page {
-	text-alignment:			left
-}
+// using this tags you can align the page number
+//area-footer:left-page {
+//	text-alignment:			left
+//}
 
-area-footer:right-page {
-	text-alignment:			right
-}
+//area-footer:right-page {
+//	text-alignment:			right
+//}
 
 area-footnotes {
 	font-size:				9.5pt
