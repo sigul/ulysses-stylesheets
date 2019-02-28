@@ -185,7 +185,7 @@ heading-2 {
 	line-height:			48pt
 	hyphenation:			no
 	text-alignment:			center
-	page-break: 			yes
+	//page-break: 			after
 }
 
 heading-3 {
@@ -323,12 +323,14 @@ block-quote {
     font-slant:		italic
 }
 
+
 block-quote > heading-5 {
-	// used to forma cite 
+	// used to format citation inside a block-quote
 	text-alignment: right
-	font-size: 9.5pt
+	font-size: 8.5pt
 	font-slant: normal
 	font-weight: normal
+        margin-top: 1pt
 }
 
 block-quote + block-quote > heading-5 {
@@ -368,12 +370,12 @@ inline-annotation {
 }
 
 inline-citation {
-	font-slant:			normal
 	style-title:	"Inline Cite"	
 }
 
+
 inline-link {
-	underline:			yes
+	underline:			single
 	style-title:		"Link"
 }
 
