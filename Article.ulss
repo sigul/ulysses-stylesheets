@@ -1,0 +1,113 @@
+//
+// Super simple style for sending articles to newspapaer and magazine
+//
+// Author: Silvio Gulizia
+//
+// Visit http://www.ulyssesapp.com/styles
+// for full reference
+//
+
+document-settings {
+	footnote-placement: end-of-page
+	locale: "it"
+	}
+
+heading-all {
+ font-family: "Arial"
+}
+
+heading-1 {
+	font-size: 33pt
+	margin-bottom: 0.5em
+	text-alignment: center
+	font-weight: bold
+}
+
+heading-2 {
+	font-size: 19pt
+	margin-top: 0.5em
+	margin-bottom: 0.1em
+	text-alignment: left
+	keep-with-following: yes
+	font-weight: bold
+}
+
+heading-4 {
+	// used to align right a paragraph
+	font-family: "Georgia"
+	hyphenation: no
+	line-height: 1.7em
+	margin-bottom: 0em
+	font-size: 14pt
+	text-alignment: right
+	font-slant: normal
+}
+
+paragraph {
+	font-family: "Georgia"
+	first-line-indent: 10pt
+	hyphenation: no
+	line-height: 1.7em
+	margin-bottom: 1em
+	font-size: 14pt
+	text-alignment: justified
+}
+
+heading-all + paragraph {
+   first-line-indent: 0pt
+}
+
+inline-strong {
+   font-weight: bold
+} 
+
+inline-emphasis {
+	font-slant: italic
+	}
+	
+inline-link {
+	font-slant: normal
+	underline: single
+	}
+	
+
+inline-citation {
+	font-slant: normal
+	style-title: "cite"
+	}
+
+
+block-quote {
+	margin-left: 20pt
+	font-slant: italic
+}
+
+list-all {
+	item-spacing:	0.5em
+	margin-left:	3em
+	text-inset:		1em
+	font-family: 		"Georgia"
+}
+
+list-unordered {
+	enumeration-format: "-"
+}
+
+list-ordered {
+	enumeration-format: "%p."
+
+}
+
+
+// Hide tags, escape characters and whitespaces
+ulysses-tag {
+	visibility: hidden
+}
+
+ulysses-escape-character {
+	visibility: hidden
+}
+
+ulysses-whitespace {
+	visibility: hidden
+}
